@@ -1,0 +1,12 @@
+/.vs
+/bin
+/build
+/obj
+/~
+/.vscode
+
+.DS_Store
+*.out
+*.out.dSYM
+*.class
+out.*
