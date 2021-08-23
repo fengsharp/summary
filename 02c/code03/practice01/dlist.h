@@ -15,7 +15,7 @@ typedef enum _DListRet
 struct _DList;
 typedef struct _DList DList;
 
-typedef void (*callback_foreach)(void *data);
+typedef void (*callback_foreach)(void *ctx, void *data);
 
 DList *dlist_create(void);
 
@@ -27,7 +27,7 @@ void *dlist_get_back(DList *thiz);
 void *dlist_get_front(DList *thiz);
 size_t dlist_get_length(DList *thiz);
 bool dlist_is_empty(DList *thiz);
-void dlist_foreach(DList *thiz, callback_foreach funcForeach);
+void dlist_foreach(DList *thiz, callback_foreach funcForeach, void *funcCtx);
 
 void dlist_destroy(DList *thiz);
 

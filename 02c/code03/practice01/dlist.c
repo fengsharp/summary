@@ -161,12 +161,12 @@ bool dlist_is_empty(DList *thiz)
     return thiz->length == 0;
 }
 
-void dlist_foreach(DList *thiz, callback_foreach funcForeach)
+void dlist_foreach(DList *thiz, callback_foreach funcForeach, void *funcCtx)
 {
     DListNode *pCursor = thiz->first;
     while (pCursor)
     {
-        funcForeach(pCursor->data);
+        funcForeach(funcCtx, pCursor->data);
 
         pCursor = pCursor->next;
     }
