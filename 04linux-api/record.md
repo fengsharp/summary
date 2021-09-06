@@ -36,3 +36,18 @@
         double 8
 2. 字符
     char 1
+
+## 6. input/output
+scanf printf getchar putchar puts
+
+%[修饰符]格式字符
+
+m    m宽
+.n   n个小数  如果是字符串，限制多少个字符个数
+- 左对齐 
++ 有符号的前面显示+
+
+## 8. struct
+1. link
+2. tree
+
