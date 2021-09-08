@@ -72,8 +72,5 @@ void test_tree()
 
     btree_draw(tree, int_print);
 
-    btree_balance(tree);
-    btree_draw(tree, int_print);
-
     btree_destory(tree, int_free);
 }

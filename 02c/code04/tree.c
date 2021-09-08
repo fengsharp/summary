@@ -175,6 +175,8 @@ void btree_push(BTree *thiz, void *element, FuncCmpElement callbackCmp)
     {
         btree_insert_node(thiz->root, element, callbackCmp);
     }
+
+    btree_balance_node(&thiz->root);
 }
 
 static void btree_draw_node(BTreeNode *node, FuncPrintElement callbackPrint, int level)
