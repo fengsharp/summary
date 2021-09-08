@@ -10,6 +10,7 @@ BTree* btree_create();
 
 void btree_push(BTree *thiz, void *element, FuncCmpElement callbackCmp);
 void btree_draw(BTree *thiz, FuncPrintElement callbackPrint);
+void btree_balance(BTree *thiz);
 
 void btree_destory(BTree *thiz, FuncFreeElement callbackFree);
 

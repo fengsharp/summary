@@ -78,6 +78,93 @@ static void btree_insert_node(BTreeNode *node, void *element, FuncCmpElement cal
     }
 }
 
+static int btree_num_node(BTreeNode *node)
+{
+    if (node == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        return btree_num_node(node->left) + 1 + btree_num_node(node->right);
+    }
+}
+
+static BTreeNode* btree_find_left_min_node(BTreeNode *node)
+{
+    if (node->left == NULL)
+    {
+        return node;
+    }
+
+    return btree_find_left_min_node(node->left);
+}
+
+static void btree_rote_left_node(BTreeNode **root)
+{
+    BTreeNode *pCursor = *root;
+    *root = pCursor->right;
+    pCursor->right = NULL;
+
+    BTreeNode *pLeftMinNode = btree_find_left_min_node((*root));
+    pLeftMinNode->left = pCursor;
+}
+
+static BTreeNode* btree_find_right_max_node(BTreeNode *node)
+{
+    if (node->right == NULL)
+    {
+        return node;
+    }
+
+    return btree_find_right_max_node(node->right);
+}
+
+static void btree_rote_right_node(BTreeNode **root)
+{
+    BTreeNode *pCursor = *root;
+    *root = pCursor->left;
+    pCursor->left = NULL;
+
+    BTreeNode *pRightMaxNode = btree_find_right_max_node((*root));
+    pRightMaxNode->right = pCursor;
+}
+
+void btree_balance_node(BTreeNode **node)
+{
+    if ((*node) == NULL)
+    {
+        return;
+    }
+
+    while (1)
+    {
+        int factor = btree_num_node((*node)->left) - btree_num_node((*node)->right);
+        if (factor < -1)
+        {
+            // rote left
+            btree_rote_left_node(node);
+        }
+        else if (factor > 1)
+        {
+            // rote right
+            btree_rote_right_node(node);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    btree_balance_node(&(*node)->left);
+    btree_balance_node(&(*node)->right);
+}
+
+void btree_balance(BTree *thiz)
+{
+    btree_balance_node(&thiz->root);
+}
+
 void btree_push(BTree *thiz, void *element, FuncCmpElement callbackCmp)
 {
     if (thiz->root == NULL)
@@ -98,7 +185,7 @@ static void btree_draw_node(BTreeNode *node, FuncPrintElement callbackPrint, int
     }
 
     btree_draw_node(node->right, callbackPrint, level + 1);
-    
+
     for (int i = 0; i < level; ++i)
     {
         printf("-");
