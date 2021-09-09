@@ -51,3 +51,65 @@ m    m宽
 1. link
 2. tree
 
+## 9. project
+1. client 端
+    - fork + child(exec -> mpg123)
+    - 多进程的实现及关系
+    - 进程间通信
+2. server 端  
+    - send list(多线程)
+    - send data(多线程)
+    - lib(file system)
+    - schedule-main
+    - 流量控制
+    - socket
+    - 守护进程（脱离中断）
+    - 系统日志
+## 10. list
+### 1. io
+#### 标准IO
+- fopen
+- fclose
+- fread
+- fwrite
+- fgets
+- fputs
+- fgetc
+- fputc
+- printf | scanf
+- fseek ftell rewind
+
+```c
+#include <error.h>
+errno
+
+#include <stdio.h>
+perror("...");
+
+#include <string.h>
+char *strerror(int errno);
+
+max file-number 1021 + 0 1 2 = 1024   
+ulimit -a
+
+
+0666 & ~mask(0002)  文件权限
+
+
+```
+
+#### 系统IO
+### 2. file system
+### 3. 并发
+### 4. IPC
+
+
+
+
+
+
+
+
+
+
+
