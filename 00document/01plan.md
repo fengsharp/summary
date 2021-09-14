@@ -8,9 +8,13 @@
 1. 系统程序员成长 系统接口范围，以及业务开发技巧  ok
 2. c++                                         ok
 3. linux api                                  
-    1. 李慧琴版本                              start                   
-    2. 黑马版本                                
-    3. C++教程网                               
+    - 目标-网络webserver
+    - 步骤：
+        1. C++教程网的socket           socket各种小细节
+        2. 《TCP IP网络编程》尹圣雨     socket概念模型抽象建立
+        3. 01Linux高性能服务器编程      tcp/udp细节
+        4. C++教程网 muduo             webserver
+        5. c++ sky                     web server                
 4. ds
     1. java版本的数据结构和算法
     2. c++版本的数据结构和算法
@@ -26,3 +30,22 @@
 目录结构:
 - 01leetcode leetcode刷题
 - 02c 系统程序员成长
+
+# 3. total
+1. webserver
+2. 多线程
+3. Linux系统源码
+4. 数据结构和算法
+5. 中间件架构（java项目实践）
+
+
+
+
+
+
+
+
+
+
+
+
