@@ -10,18 +10,21 @@
 3. linux api                                  
     - 目标-网络webserver
     - 步骤：
-        1. C++教程网的socket           socket各种小细节
-        2. 《TCP IP网络编程》尹圣雨     socket概念模型抽象建立
-        3. 01Linux高性能服务器编程      tcp/udp细节
-        4. C++教程网 muduo             webserver
-        5. c++ sky                     web server                
+        1. C++教程网的socket           socket各种小细节   代码走起来
+        2. C++教程网 muduo             webserver
+        ```
+        https://github.com/834810071/muduo_study
+
+        ```
+        3. c++ sky                     web server    
+                
 4. ds
     1. java版本的数据结构和算法
     2. c++版本的数据结构和算法
     3. letcode
 ## 1.3 network
 1. 网络原理
-2. 陈硕视频
+2. 陈硕视频  Linux高性能服务器编程      tcp/udp细节    
 ## 1.4 webserver
 1. muduo 
 2. sky
@@ -34,11 +37,12 @@
 # 3. total
 1. webserver
 2. 多线程
-3. mfpgameserver
-4. Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
-5. 数据结构和算法
-6. 中间件架构（java项目实践）
-7. 各种源码
+3. lua+skynet
+4. mfpgameserver
+5. Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
+6. 数据结构和算法
+7. 中间件架构（java项目实践）
+8. 各种源码
 
 
 
