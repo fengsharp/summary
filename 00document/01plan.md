@@ -39,6 +39,10 @@
 2. 多线程
 3. lua+skynet
 ```
+1. 聊天
+https://github.com/fengsharp/flamingo
+
+2. skynet
 百万在线：游戏服务端开发实战
 https://skynetclub.github.io/book/
 https://www.bilibili.com/video/BV1Gh411Y7rU?from=search&seid=12434382527175912702&spm_id_from=333.337.0.0
@@ -50,7 +54,11 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 7. 中间件架构（java项目实践）
 8. 各种源码
 
+9. go
+```
+1. https://zhuanlan.zhihu.com/p/407882351
 
+```
 
 
 
