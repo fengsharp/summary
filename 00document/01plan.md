@@ -10,11 +10,11 @@
 3. linux api                                  
     - 目标-网络webserver
     - 步骤：
-        1. C++教程网的socket           socket各种小细节   代码走起来
+        1. C++教程网的socket           socket各种小细节   代码走起来     ok
         2. C++教程网 muduo             webserver
         ```
         https://github.com/834810071/muduo_study
-
+        http://www.52im.net/thread-1003-1-1.html
         ```
         3. c++ sky                     web server    
                 
@@ -37,6 +37,10 @@
 # 3. total
 1. webserver
 2. 多线程
+```
+POSIX多线程程序设计中文版
+https://blog.csdn.net/future_fighter/article/details/3865071#ref
+```
 3. lua+skynet
 ```
 1. 聊天
