@@ -37,10 +37,6 @@
 # 3. total
 1. webserver
 2. 多线程
-```
-POSIX多线程程序设计中文版
-https://blog.csdn.net/future_fighter/article/details/3865071#ref
-```
 3. lua+skynet
 ```
 1. 聊天
