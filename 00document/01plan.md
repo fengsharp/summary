@@ -49,7 +49,7 @@ https://www.bilibili.com/video/BV1Gh411Y7rU?from=search&seid=1243438252717591270
 https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85%B3%E4%BA%8ESkynet.html
 ```
 4. mfpgameserver
-5. Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
+5. 计算机系统要素（从电路到计算机，编译原理），Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
 6. 数据结构和算法
 7. 中间件架构（java项目实践）
 8. 各种源码
