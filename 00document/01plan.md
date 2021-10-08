@@ -11,8 +11,8 @@
     - 目标-网络webserver
     - 步骤：
         1. C++教程网的socket           socket各种小细节   代码走起来     ok
-        2. C++教程网的C++
-        3. C++教程网 muduo             webserver
+        2. C++教程网的C++              C++一些特定的概念                ok
+        3. C++教程网 muduo             webserver                       start  
         ```
         https://github.com/834810071/muduo_study
         http://www.52im.net/thread-1003-1-1.html
