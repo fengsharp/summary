@@ -48,6 +48,8 @@ https://github.com/fengsharp/flamingo
 https://skynetclub.github.io/book/
 https://www.bilibili.com/video/BV1Gh411Y7rU?from=search&seid=12434382527175912702&spm_id_from=333.337.0.0
 https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85%B3%E4%BA%8ESkynet.html
+
+3. Sogou C++ Workflow
 ```
 4. mfpgameserver
 5. 计算机系统要素（从电路到计算机，编译原理），Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
