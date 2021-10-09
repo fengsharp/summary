@@ -52,7 +52,9 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 4. mfpgameserver
 5. 计算机系统要素（从电路到计算机，编译原理），Linux系统源码  Linux环境编程：从应用到内核 《Linux内核分析及应用》  
 6. 数据结构和算法
-7. 中间件架构（java项目实践）
+7. 中间件架构（java项目实践）    
+    - 亿级流量Java高并发与网络编程实战
+    - https://www.codenong.com/cs106008337/
 8. 各种源码
 
 9. go
