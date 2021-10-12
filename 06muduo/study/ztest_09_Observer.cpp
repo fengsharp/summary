@@ -82,3 +82,9 @@ int main()
 
     return 0;
 }
+
+/*
+Observable 管理 Observer，但是不负责 Observer 的生命周期
+所以添加接口和数据集合都用 std::weak_ptr
+使用时，需要判断是否存在
+*/
