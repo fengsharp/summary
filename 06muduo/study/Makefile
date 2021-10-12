@@ -6,7 +6,8 @@ all:
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_05_Singleton.cpp -o out.05 -lpthread
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_06_SingletonThreadLocal.cpp -o out.06 -lpthread
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_07_ThreadLocalSingleton.cpp -o out.07 -lpthread
-	clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_08_Exception.cpp -o out.08 -lpthread
+	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_08_Exception.cpp -o out.08 -lpthread
+	clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_09_Observer.cpp -o out.09 -lpthread
 	
 clean:
 	rm -fr out.*
