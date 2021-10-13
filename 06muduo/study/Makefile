@@ -10,7 +10,9 @@ all:
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_09_Observer.cpp -o out.09 -lpthread
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_10_SelfDeadLock.cpp -o out.10 -lpthread
 	@#clang++ -g -Wall Exception.cpp Thread.cpp ThreadPool.cpp ztest_11_BlockingQueue.cpp -o out.11 -lpthread
-	clang++ -g -Wall EventLoop.cpp Exception.cpp Thread.cpp ThreadPool.cpp ztest_100_eventloop.cpp -o out.100 -lpthread
+	@#clang++ -g -Wall EventLoop.cpp Exception.cpp Thread.cpp ThreadPool.cpp ztest_100_eventloop.cpp -o out.100 -lpthread
+	clang++ -g -Wall Channel.cpp EventLoop.cpp Poller.cpp Timestamp.cpp Exception.cpp Thread.cpp ThreadPool.cpp ztest_101_channel.cpp -o out.101 -lpthread
+	
 	
 clean:
 	rm -fr out.*
