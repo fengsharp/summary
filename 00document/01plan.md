@@ -70,7 +70,7 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 9. go
 ```
 1. Go入门指南 https://learnku.com/docs/the-way-to-go
-1. go基础  https://golang.iswbm.com/
+1. https://github.com/rubyhan1314/go_goroutine
 
 1. https://zhuanlan.zhihu.com/p/407882351
 2. https://www.zhihu.com/question/23486344
