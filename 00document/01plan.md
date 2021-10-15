@@ -70,11 +70,12 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 9. go
 ```
 1. Go入门指南 https://learnku.com/docs/the-way-to-go
+1. 入门 https://eddycjy.gitbook.io/golang/
 
 1. https://zhuanlan.zhihu.com/p/407882351
 2. https://www.zhihu.com/question/23486344
 3. GO 命令教程 https://wiki.jikexueyuan.com/project/go-command-tutorial/0.0.html
-4. 入门 https://eddycjy.gitbook.io/golang/
+
 5. Go语言高级编程 https://chai2010.gitbooks.io/advanced-go-programming-book/content/
 7. go基础  https://golang.iswbm.com/
 8. test驱动 https://studygolang.gitbook.io/learn-go-with-tests
