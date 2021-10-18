@@ -67,18 +67,22 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
     - https://www.codenong.com/cs106008337/
 8. 各种源码
 
-9. go
+9. 算法
+    1. https://github.com/youngyangyang04/leetcode-master
+    2. https://mp.weixin.qq.com/s/AWsL7G89RtaHyHjRPNJENA
 ```
-1. Go入门指南 https://learnku.com/docs/the-way-to-go
-1. https://github.com/rubyhan1314/go_goroutine
-
-1. https://zhuanlan.zhihu.com/p/407882351
-2. https://www.zhihu.com/question/23486344
-3. GO 命令教程 https://wiki.jikexueyuan.com/project/go-command-tutorial/0.0.html
-
-5. Go语言高级编程 https://chai2010.gitbooks.io/advanced-go-programming-book/content/
-
-8. test驱动 https://studygolang.gitbook.io/learn-go-with-tests
+1. 排序
+2. 递归与分治
+3. 动态规划
+4. 贪心
+5. 回溯
+6. 搜索
+7. 随机化
+8. 图论
+9. 数论
+10. 几何
+11. NP
+12. 位运算
 ```
 
 
