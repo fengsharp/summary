@@ -88,6 +88,12 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 ## 2. action
 1. muduo webserver原理和demo代码    10
 2. java体系结构                     11
+    - java基础
+    - java web 项目实战 锋迷在线
+    - java nio thread jvm 
+    - java 架构师
+    - java project
+    - java数据结构和算法
 3. 操作系统 Linux shell 操作系统api应用开发
 4. skynet lua + 百万游戏demo
 5. 数据结构和算法
