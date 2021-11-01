@@ -1,0 +1,204 @@
+1. 登录
+mysql -h 192.168.154.128 -P 3306 -u root -p 
+2. 退出
+exit
+3. CRUD create retrieve update delete
+    - create database if not exists xxx;
+    - show databases;
+    - show create database xxx;
+    - drop database if exists xxx;
+    - select database();
+    - use xxx;
+4. CRUD table
+    - create table xxx (field type, xxx);
+    - int double date(yyyy-MM-dd) datetime(yyyy-MM-dd HH:mm:ss) timestamp varchar
+    - show tables;
+    - desc xxx;
+    - alter table xxx add filed type;
+    - alter table xxx modify filed newtype;
+    - alter table xxx change field newname newtype;
+    - drop table if exists xxx;
+
+5. 备份还原
+    - 备份 mysql -u root -p xxx mydbname > file.sql
+    - 还原 use mydb; source file.sql;
+
+6. 数据库的设计
+    1. 多表之间的关系
+        1. 分类
+            1. 一对一 人和身份证
+            2. 一对多 部门和员工
+            3. 多对多 课程和学生
+        2. 实现方式
+            1. 一对多 外键
+            2. 多对多 中间表
+            3. 一对一比较少，很可能要合成一张表
+    2. 数据库设计范式
+        1. 每个字段不可分割
+        2. 一个表有一个主键，其他字段都依赖主键
+        3. 去掉传递依赖，一个表里面的非主键，只能依赖主键
+
+7. 事务类比锁
+    场景，A: start transaction record1 - 50 record2 + 50; commit
+          B: start transaction read record1 read record2  commit
+    1. 不加锁时，A -50  B 立刻看到了A-50   脏读
+    2. 加读写锁  A - 50 B + 50 release(write)  lock(read) 此时 B 一开始read的数据和现在read的数据不同 不可重复读(虚读)
+    3. 读写锁 A只拿到写锁 B只拿到读锁 A在提交前，B开始事务看到的数据和最后结束时，看到的数据一致 解决了脏读和不可重复读的问题
+    4. 写时拷贝  A写的时候，拷贝了数据写入，B读的数据还是原来的数据集合，新的记录看不到   幻读
+    5. 加锁-原子操作 串行化的锁，解决幻读，性能代价太大
+
+    1. 脏读：一个事务，读取到另一个事务中没有提交的数据
+    2. 不可重复读(虚读)：在同一个事务中，两次读取到的数据不一样。
+    3. 幻读：一个事务操作(DML)数据表中所有记录，另一个事务添加了一条数据，则第一个事务查询不到自己的修改。
+
+    1. read uncommitted：读未提交
+        * 产生的问题：脏读、不可重复读、幻读
+    2. read committed：读已提交 （Oracle）
+        * 产生的问题：不可重复读、幻读
+    3. repeatable read：可重复读 （MySQL默认）
+        * 产生的问题：幻读
+    4. serializable：串行化
+        * 可以解决所有的问题
+
+8. mysql 连接和初始化
+jdbc:mysql://192.168.154.128:3306/study
+
+try {
+    Class.forName("com.mysql.jdbc.Driver");
+    try (Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.154.128:3306/study?useSSL=false","root","Love_321")) {
+        String sql = "select * from user where id = ?";
+        try (PreparedStatement statement = connection.prepareCall(sql)) {
+            statement.setInt(1, 1);
+            try (ResultSet rs = statement.executeQuery()) {
+                while(rs.next()) {
+                    int id = rs.getInt("id");
+                    String name = rs.getString("name");
+                    int age = rs.getInt("age");
+                    System.out.println("id:" + id + " name：" + name + " age：" + age);
+                }
+            }
+        }
+    }
+} catch (ClassNotFoundException | SQLException e) {
+    e.printStackTrace();
+}
+
+9. data source
+try {
+    Properties pro = new Properties();
+    InputStream is = TestConnect.class.getClassLoader().getResourceAsStream("druid.properties");
+    pro.load(is);
+
+    DataSource ds = DruidDataSourceFactory.createDataSource(pro);
+
+    try (Connection connection = ds.getConnection()) {
+        String sql = "select * from user where id = ?";
+        try (PreparedStatement statement = connection.prepareCall(sql)) {
+            statement.setInt(1, 1);
+            try (ResultSet rs = statement.executeQuery()) {
+                while(rs.next()) {
+                    int id = rs.getInt("id");
+                    String name = rs.getString("name");
+                    int age = rs.getInt("age");
+                    System.out.println("id:" + id + " name：" + name + " age：" + age);
+                }
+            }
+        }
+    }
+} catch (SQLException | IOException e) {
+    e.printStackTrace();
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
+================================================================== druid.properties
+driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql://192.168.154.128:3306/study?useSSL=false
+username=root
+password=Love_321
+# 初始化连接数量
+initialSize=5
+# 最大连接数
+maxActive=10
+# 最大等待时间
+maxWait=3000
+
+======================================================================
+
+10. jdbcTemplate
+
+1. 修改1号数据的 age 为 100
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "update user set age = 100 where id = ?";
+int count = template.update(sql, 1);
+
+2. 添加一条记录
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "insert into user(id, name, age, password) values (?, ?, ?, ?)";
+int count = template.update(sql, 3, "del", 300, "delpaw");
+System.out.println(count);
+
+3. 删除刚才添加的记录
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "delete from user where id = ?";
+int count = template.update(sql, 3);
+System.out.println(count);
+
+4. 查询id为1的记录，将其封装为Map集合
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "select * from user where id = ?";
+Map<String, Object> stringObjectMap = template.queryForMap(sql, 1);
+System.out.println(stringObjectMap);
+
+
+5. 查询所有记录，将其封装为List
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "select * from user";
+List<Map<String, Object>> maps = template.queryForList(sql);
+for (Map<String, Object> map : maps) {
+    System.out.println(map);
+}
+
+
+6. 查询所有记录，将其封装为Emp对象的List集合
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "select * from user";
+List<User> query = template.query(sql, new BeanPropertyRowMapper<User>(User.class));
+for (User user : query) {
+    System.out.println(user);
+}
+
+
+7. 查询总记录数
+JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
+String sql = "select count(*) from user";
+Long ret = template.queryForObject(sql, Long.class);
+System.out.println(ret);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
