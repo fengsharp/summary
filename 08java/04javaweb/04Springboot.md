@@ -35,8 +35,129 @@ public Role getUserRole(@PathVariable(name="id") long id, @PathVariable(value="r
 
 
 
+# 2. 简单工程
+1. 模板创建
+2. 选择组件
+    - developer tools -> lombok
+    - web -> spring web
+    - template engine -> thymeleaf
+    - sql -> mybatis framework | mysql
 
+3. 修改配置 pom.xml
+```xml
+<properties>
+    <java.version>13</java.version>
+</properties>
 
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.47</version>
+    <scope>runtime</scope>
+</dependency>
+
+```
+4. resources/application.yml  
+mkdir -p resources/mappers
+```yml
+server:
+  port: 8899
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.154.128:3306/study?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: Love_321
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.sharp.first.domain
+```
+
+5. application-main
+```java
+@MapperScan("com.sharp.first.dao")
+```
+
+6. 目录
+```txt
+controller
+    UserController
+service
+    UserService
+        UserServiceImpl
+dao
+    UserDao
+domain
+    User
+```
+
+7. code-domain
+```java
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class User {
+    private int id;
+    private String name;
+    private String pwd;
+}
+
+```
+
+8. code-dao
+```java
+public interface UserMapper {
+    User findUser(int id);
+}
+```
+
+9. code-mapper
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharp.first.dao.UserMapper">
+    <select id="findUser" resultType="com.sharp.first.domain.User">
+        select * from user where id = #{id};
+    </select>
+</mapper>
+```
+
+10. code-service
+```java
+public interface UserService {
+    User findUser(int id);
+}
+
+@Service
+public class UserServiceImpl implements UserService {
+    @Resource
+    private UserMapper userMapper;
+
+    @Override
+    public User findUser(int id) {
+        return userMapper.findUser(id);
+    }
+}
+```
+
+11. code-controller
+```java
+@Controller
+@RequestMapping("/user")
+public class UserController {
+    @Resource
+    private UserService userService;
+
+    @RequestMapping("/find")
+    @ResponseBody
+    public User findUser(int id) {
+        return userService.findUser(id);
+    }
+}
+```
 
 
 
