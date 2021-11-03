@@ -55,13 +55,22 @@ public Role getUserRole(@PathVariable(name="id") long id, @PathVariable(value="r
     <version>5.1.47</version>
     <scope>runtime</scope>
 </dependency>
-
 ```
+或者
+```xml
+<properties>
+    <java.version>13</java.version>
+    <mysql.version>5.1.47</mysql.version>
+</properties>
+```
+
 4. resources/application.yml  
 mkdir -p resources/mappers
 ```yml
 server:
   port: 8899
+  servlet:
+    context-path: /
 spring:
   datasource:
     url: jdbc:mysql://192.168.154.128:3306/study?useSSL=false
