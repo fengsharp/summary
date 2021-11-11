@@ -1,3 +1,19 @@
+# 0. 路线
+1. 数据结构和算法
+    - 树 图 排序(黑马教程)
+2. 操作系统
+    - 李志军
+    - 真相还原
+    - 奔跑吧 Linux内核
+    - linux 0.11
+3. 编译原理
+    - 郑刚
+4. c项目源码 skynet redis
+    - net
+    - thread
+5. 应用
+    - 游戏
+
 # 1. step
 ## 1.1 os
 1. 真相还原               ok
@@ -89,13 +105,12 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 1. muduo webserver原理和demo代码    10
 2. java体系结构                     11
     - java基础
-        1. java 廖雪峰              当前
+        1. java 廖雪峰              完成
         2. nio 
         3. thread 
         4. jvm 
     - java project
-        1. 锋迷在线
-        2. 尚医疗
+        1. 锋迷在线                 当前
     - java 架构师
         1. oop
         2. 黑马
