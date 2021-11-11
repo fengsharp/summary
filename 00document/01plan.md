@@ -6,6 +6,7 @@
     - 真相还原
     - 奔跑吧 Linux内核
     - linux 0.11
+    - Linux环境编程：从应用到内核
 3. 编译原理
     - 郑刚
 4. c项目源码 skynet redis
