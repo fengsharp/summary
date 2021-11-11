@@ -1,0 +1,5 @@
+Windows： %APPDATA%\syntevo\SmartGit\
+OS X： ~/Library/Preferences/SmartGit/
+Unix/Linux： ~/.smartgit/
+
+删除目录，重进
