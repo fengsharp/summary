@@ -1,0 +1,4 @@
+1. Linux高性能服务器编程 了解了cpp网络的基本原理和编程
+2. 学习libevent和redis源码，有本文档是libevent源码分析，基于C实现的，但是思想采用的是Reactor模式 
+    https://blog.csdn.net/sparkliang/category_660506.html
+    https://www.cnblogs.com/secondtonone1/category/837519.html
