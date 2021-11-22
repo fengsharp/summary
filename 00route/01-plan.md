@@ -141,6 +141,8 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
     - nginx使用 
     - nginx+lua
     - 阅读代码 
+    - https://moonbingbing.gitbooks.io/openresty-best-practices/content/
+    
 6. skynet
     - 使用
     - 代码阅读
