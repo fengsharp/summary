@@ -17,19 +17,19 @@
 
 # 1. step
 ## 1.1 os
-1. 真相还原               ok
+1. 真相还原              
 2. linux1.2源码解析
 3. 李志军
 
 ## 1.2 c
-1. 系统程序员成长 系统接口范围，以及业务开发技巧  ok
-2. c++                                         ok
+1. 系统程序员成长 系统接口范围，以及业务开发技巧  
+2. c++                                         
 3. linux api                                  
     - 目标-网络webserver
     - 步骤：
-        1. C++教程网的socket           socket各种小细节   代码走起来     ok
-        2. C++教程网的C++              C++一些特定的概念                ok
-        3. C++教程网 muduo             webserver                       start  
+        1. C++教程网的socket           socket各种小细节   代码走起来     
+        2. C++教程网的C++              C++一些特定的概念                
+        3. C++教程网 muduo             webserver                       
         ```
         https://github.com/834810071/muduo_study
         http://www.52im.net/thread-1003-1-1.html
@@ -103,15 +103,15 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 ```
 
 ## 2. action
-1. muduo webserver原理和demo代码    10
-2. java体系结构                     11
+1. muduo webserver原理和demo代码 
+2. java体系结构                  
     - java基础
-        1. java 廖雪峰              完成
+        1. java 廖雪峰      
         2. nio 
         3. thread 
         4. jvm 
     - java project
-        1. 锋迷在线                 当前
+        1. 锋迷在线          
     - java 架构师
         1. oop
         2. 黑马
@@ -122,7 +122,34 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
 5. 数据结构和算法
 
 
-
+## 3. task
+1. 系统程序员 
+    - 状态机     周二
+    - xml处理    周三
+2. cJSON
+    - 使用
+    - 实现
+    - 代码分析
+3. cmockery
+    - 使用
+    - 实现
+    - 代码分析
+4. muduo
+    - base 线程并发
+    - net  对象关系
+5. nginx   
+    - nginx使用 
+    - nginx+lua
+    - 阅读代码 
+6. skynet
+    - 使用
+    - 代码阅读
+7. sylar
+    - 代码阅读
+8. redis
+    - 代码阅读
+9. libevent
+    - 代码阅读
 
 
 
