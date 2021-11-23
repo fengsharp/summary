@@ -148,10 +148,14 @@ https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85
     - 代码阅读
 7. sylar
     - 代码阅读
+    - Skynet 框架之菜鸟手册 http://loccy.top/content/uploadfile/201607/f35e1469583494.pdf
+    - https://toutiao.io/posts/u045z3/preview
 8. redis
     - 代码阅读
 9. libevent
     - 代码阅读
+10. https://zhuanlan.zhihu.com/p/66304813
+
 
 
 
