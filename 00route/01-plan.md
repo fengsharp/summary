@@ -64,7 +64,15 @@ https://github.com/fengsharp/flamingo
 百万在线：游戏服务端开发实战
 https://skynetclub.github.io/book/
 https://www.bilibili.com/video/BV1Gh411Y7rU?from=search&seid=12434382527175912702&spm_id_from=333.337.0.0
-https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85%B3%E4%BA%8ESkynet.html
+https://www.luozhiwen.com/post/skynet%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%85%B3%E4%BA%8ESkynet.html  
+https://blog.csdn.net/libaineu2004/article/details/75102732  
+https://blog.csdn.net/qq769651718/category_7480207.html  
+
+https://download.csdn.net/download/weixin_42108778/15014161?utm_medium=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-2.test_version_3&depth_1-utm_source=distribute.pc_relevant_download.none-task-download-2~default~BlogCommendFromBaidu~default-2.test_version_3&dest=https%3A%2F%2Fdownload.csdn.net%2Fdownload%2Fweixin_42108778%2F15014161&spm=1003.2020.3001.6616.2
+
+https://download.csdn.net/download/zsj897897/9728362?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link
+
+
 
 3. Sogou C++ Workflow
 
