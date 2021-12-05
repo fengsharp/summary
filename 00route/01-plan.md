@@ -131,9 +131,7 @@ https://download.csdn.net/download/zsj897897/9728362?spm=1001.2101.3001.6661.1&u
 
 
 ## 3. task
-1. 系统程序员 
-    - 状态机     周二
-    - xml处理    周三
+1. 系统程序员 ok
 2. cJSON
     - 使用
     - 实现
@@ -163,6 +161,9 @@ https://download.csdn.net/download/zsj897897/9728362?spm=1001.2101.3001.6661.1&u
 9. libevent
     - 代码阅读
 10. https://zhuanlan.zhihu.com/p/66304813
+11. 多线程
+    - 无锁编程
+    - java无锁多线程源码
 
 
 
